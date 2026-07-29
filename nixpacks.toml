@@ -1,9 +1,0 @@
-[phases]
-  [phases.install]
-  dep_commands = ["npm install --build-from-source"]
-
-  [phases.build]
-  cmds = ["echo 'build ready'"]
-
-[start]
-  cmd = "node server.js"
