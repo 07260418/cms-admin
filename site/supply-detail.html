@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>产品详情 - 中国-东盟特色产业链出海平台</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=215">
+</head>
+<body>
+
+<!-- ====== HEADER ====== -->
+<header>
+  <div class="header-inner">
+    <a href="sy-index.html" class="logo-link"><img src="images/logo.png?v=1" alt="logo" class="logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="logo-fallback">🌏</span></a>
+    <nav>
+      <a href="sy-index.html">首页</a>
+      <div class="nav-dropdown">
+        <a href="sy-index.html" class="nav-dropdown-trigger">业务介绍</a>
+        <div class="nav-dropdown-menu">
+          <a href="supply-finance.html">供应链金融</a>
+          <a href="tourism.html">文旅生态</a>
+          <a href="development.html">新品研发</a>
+          <a href="testing.html">产品检测</a>
+          <a href="education.html">教育合作</a>
+          <a href="training.html">培训</a>
+          <a href="certification.html">认证</a>
+        </div>
+      </div>
+      <a href="events.html">协会大事记</a>
+      <a href="supply.html" class="nav-active">供应链</a>
+      <a href="news.html">新闻资讯</a>
+      <a href="park.html">生产园区</a>
+      <div class="nav-dropdown">
+        <a href="logistics.html" class="nav-dropdown-trigger">物流保税</a>
+        <div class="nav-dropdown-menu">
+          <a href="logistics.html">物流服务</a>
+          <a href="http://www.xianmai.cn/" target="_blank">物流系统</a>
+        </div>
+      </div>
+      <a href="exhibition.html">会展服务</a>
+      <div class="nav-dropdown">
+        <a href="javascript:void(0)" class="nav-dropdown-trigger">合作招商</a>
+        <div class="nav-dropdown-menu">
+          <a href="partner.html">合作招商</a>
+          <a href="info-collection.html">信息采集</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <a href="#" class="nav-dropdown-trigger">在线商城</a>
+        <div class="nav-dropdown-menu">
+          <a href="https://tesechanyelian.en.alibaba.com/" target="_blank">阿里巴巴国际站</a>
+          <a href="https://hl.ehuifa.com/cmp#/" target="_blank">河州味道</a>
+        </div>
+      </div>
+
+<a href="#">选择语言</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- ====== 面包屑 ====== -->
+<section class="supply-detail-breadcrumb">
+  <div class="content-area">
+    <a href="supply.html" class="sd-back">&larr; 返回供应链</a>
+    <span class="sd-bc-sep">/</span>
+    <span id="sdBcCat">分类</span>
+    <span class="sd-bc-sep">/</span>
+    <span id="sdBcName">产品名称</span>
+  </div>
+</section>
+
+<!-- ====== 产品详情 ====== -->
+<section class="sd-hero">
+  <div class="content-area">
+    <div class="sd-layout">
+      <!-- 左：产品大图 -->
+      <div class="sd-image" data-aos="fade-right">
+        <div class="sd-img-wrap">
+          <img id="sdImg" src="images/yewujieshao/gongyinglianjinrong/Mask group.png" alt="产品图片" data-cms="supply-detail.image" data-cms-mode="src">
+        </div>
+      </div>
+      <!-- 右：产品信息 -->
+      <div class="sd-info" data-aos="fade-left">
+        <h1 class="sd-name" id="sdName" data-cms="supply-detail.name" data-cms-mode="text"></h1>
+
+
+        <div class="sd-actions">
+          <a href="javascript:void(0)" class="sd-btn-primary" onclick="openSdModal()">合作咨询</a>
+          <a href="supply.html" class="sd-btn-secondary">返回列表</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== 产品详情 + 推荐产品 ====== -->
+<section class="sd-lower-section">
+  <div class="content-area">
+
+    <!-- 产品详情 -->
+    <div class="sd-detail-main">
+      <h3 class="sd-section-title">产品详情</h3>
+      <div class="sd-detail-content" id="sdDetail" data-cms="supply-detail.detail" data-cms-mode="html">
+        <p>暂无详情内容，请在后台编辑。</p>
+      </div>
+    </div>
+
+    <!-- 推荐产品网格 -->
+    <div class="sd-related-bottom">
+      <h3 class="sd-section-title sd-section-title-related">推荐产品</h3>
+      <div class="supply-grid" id="relatedGrid"></div>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<!-- ====== 咨询弹窗 ====== -->
+<div class="sd-modal-overlay" id="sdModalOverlay" onclick="closeSdModal()">
+  <div class="sd-modal" onclick="event.stopPropagation()">
+    <button class="sd-modal-close" onclick="closeSdModal()">&times;</button>
+    <div class="sd-modal-icon">&#9742;</div>
+    <h3 class="sd-modal-title">合作咨询</h3>
+    <p class="sd-modal-desc">如有合作意向，请致电咨询</p>
+    <a href="tel:400-888-8888" class="sd-modal-phone">400-888-8888</a>
+    <p class="sd-modal-time">工作日 9:00 - 18:00</p>
+  </div>
+</div>
+
+<!-- ====== FOOTER ====== -->
+<footer>
+  <div class="content-area">
+    <div class="footer-grid">
+      <div class="fcol">
+        <h4>合作伙伴</h4>
+        <ul>
+          <li><a href="supply-finance.html">供应链金融</a></li>
+          <li><a href="tourism.html">文旅生态</a></li>
+          <li><a href="development.html">新品研发</a></li>
+          <li><a href="testing.html">产品检测</a></li>
+          <li><a href="education.html">教育合作</a></li>
+          <li><a href="training.html">培训</a></li>
+          <li><a href="certification.html">认证</a></li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <h4>供应链</h4>
+        <ul>
+          <li><a href="supply.html">冷冻产成品类</a></li>
+          <li><a href="supply.html">冷冻肉制品分割类</a></li>
+          <li><a href="supply.html">冷冻果蔬类</a></li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <h4>新闻资讯</h4>
+        <ul>
+          <li><a href="sy-index.html#news">行业新闻</a></li>
+          <li><a href="sy-index.html#news">协会动态</a></li>
+        </ul>
+      </div>
+      <div class="fcol fcol-contact">
+        <h4>联系我们</h4>
+        <ul class="contact-info">
+          <li><span class="contact-icon"><img src="images/icon-location.png" alt="地址" width="20" height="20"></span>北京市海淀区中关村科技园区88号</li>
+          <li><span class="contact-icon"><img src="images/icon-phone.png" alt="电话" width="20" height="20"></span>+86 10 8888 8888</li>
+          <li><span class="contact-icon"><img src="images/icon-email.png" alt="邮箱" width="20" height="20"></span>research@innovation-center.com</li>
+        </ul>
+        <div class="qr-row">
+          <div class="qr-box"><img src="images/企业微信截图_91538b3c-cf5c-4dc0-91cb-91fbd591bc50 1.png" data-cms="home.qr1_image" data-cms-mode="src" alt="城市合作" width="100" height="100" loading="lazy" decoding="async"><span data-cms="home.qr1_name">城市合作</span></div>
+          <div class="qr-box"><img src="images/企业微信截图_91538b3c-cf5c-4dc0-91cb-91fbd591bc50 2.png" data-cms="home.qr2_image" data-cms-mode="src" alt="生产商合作" width="100" height="100" loading="lazy" decoding="async"><span data-cms="home.qr2_name">生产商合作</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 中国-东盟特色产业链出海平台</span>
+      <div class="fb-links">
+        <a href="#">隐私政策</a>
+        <a href="#">服务条款</a>
+        <a href="#">网站地图</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="main.js"></script>
+<script>
+(function(){
+  // 解析 URL 参数
+  var params = new URLSearchParams(window.location.search);
+  var name = params.get('name') || '产品名称';
+  var cat = params.get('cat') || 'all';
+  var img = params.get('img') || '';
+
+  // 分类名称映射
+  var catNames = {
+    'frozen-products': '冷冻产成品类',
+    'frozen-meat': '冷冻肉制品分割类',
+    'frozen-fruit': '冷冻果蔬类'
+  };
+
+  document.getElementById('sdName').textContent = name;
+  document.getElementById('sdBcName').textContent = name;
+  document.getElementById('sdBcCat').textContent = catNames[cat] || '全部产品';
+
+  var imgEl = document.getElementById('sdImg');
+  if(img){
+    imgEl.src = img;
+  }
+  // 无 img 参数时使用默认图（已在 HTML 中设好 src）
+
+  document.title = name + ' - 产品详情';
+
+  var allProducts = [
+    {name:'速冻水饺',cat:'frozen-products',img:'images/yewujieshao/gongyinglianjinrong/Mask group.png',catName:'冷冻产成品类',specs:['规格：400g/袋','保质期：12个月','储存温度：-18℃以下'],features:['手工包制','皮薄馅大','适合蒸煮煎炸']},
+    {name:'速冻包子',cat:'frozen-products',img:'images/yewujieshao/gongyinglianjinrong/Mask group@2x.png',catName:'冷冻产成品类',specs:['规格：100g/个','保质期：12个月','储存温度：-18℃以下'],features:['即蒸即食','口味丰富','早餐首选']},
+    {name:'速冻馄饨',cat:'frozen-products',img:'images/yewujieshao/gongyinglianjinrong/Mask group_1.png',catName:'冷冻产成品类',specs:['规格：500g/袋','保质期：12个月','储存温度：-18℃以下'],features:['皮薄馅嫩','汤鲜味美','操作简便']},
+    {name:'速冻烧麦',cat:'frozen-products',img:'images/yewujieshao/gongyinglianjinrong/Mask group4.png',catName:'冷冻产成品类',specs:['规格：300g/袋','保质期：12个月','储存温度：-18℃以下'],features:['皮薄馅多','鲜美多汁','蒸熟即食']},
+    {name:'速冻春卷',cat:'frozen-products',img:'images/yewujieshao/gongyinglianjinrong/Rectangle 2.png',catName:'冷冻产成品类',specs:['规格：250g/袋','保质期：12个月','储存温度：-18℃以下'],features:['金黄酥脆','多种口味','操作便捷']},
+    {name:'速冻汤圆',cat:'frozen-products',img:'images/yewujieshao/gongyinglianjinrong/Rectangle 3.png',catName:'冷冻产成品类',specs:['规格：400g/袋','保质期：12个月','储存温度：-18℃以下'],features:['软糯香甜','多种馅料','传统美食']},
+    {name:'速冻花卷',cat:'frozen-products',img:'images/yewujieshao/gongyinglianjinrong/Rectangle 5.png',catName:'冷冻产成品类',specs:['规格：300g/袋','保质期：12个月','储存温度：-18℃以下'],features:['松软可口','方便加热','早餐佳品']},
+    {name:'速冻锅贴',cat:'frozen-products',img:'images/yewujieshao/gongyinglianjinrong/Mask group.png',catName:'冷冻产成品类',specs:['规格：350g/袋','保质期：12个月','储存温度：-18℃以下'],features:['底部酥脆','皮软馅香','煎制更佳']},
+    {name:'清真冷冻牛肉卷',cat:'frozen-meat',img:'images/yewujieshao/gongyinglianjinrong/Rectangle 118@2x.png',catName:'冷冻肉制品分割类',specs:['规格：1kg/卷','保质期：18个月','储存温度：-18℃以下'],features:['精选牛肉','严格检疫','冷链配送']},
+    {name:'清真冷冻羊肉串',cat:'frozen-meat',img:'images/yewujieshao/gongyinglianjinrong/Rectangle 120@2x.png',catName:'冷冻肉制品分割类',specs:['规格：250g/串','保质期：18个月','储存温度：-18℃以下'],features:['草原羊肉','串制方便','烧烤首选']},
+    {name:'清真冷冻鸡肉块',cat:'frozen-meat',img:'images/yewujieshao/gongyinglianjinrong/Rectangle 126.png',catName:'冷冻肉制品分割类',specs:['规格：500g/袋','保质期：18个月','储存温度：-18℃以下'],features:['去骨鸡腿肉','口感嫩滑','烹饪多样']},
+    {name:'冷冻牛肉分割品',cat:'frozen-meat',img:'images/yewujieshao/gongyinglianjinrong/Mask group4.png',catName:'冷冻肉制品分割类',specs:['规格：按需分割','保质期：18个月','储存温度：-18℃以下'],features:['部位可选','品质优良','鲜切冷链']},
+    {name:'冷冻羊肉分割品',cat:'frozen-meat',img:'images/yewujieshao/gongyinglianjinrong/Rectangle 2.png',catName:'冷冻肉制品分割类',specs:['规格：按需分割','保质期：18个月','储存温度：-18℃以下'],features:['精选羔羊','部位多样','冷链保障']},
+    {name:'冷冻鸡肉分割品',cat:'frozen-meat',img:'images/yewujieshao/gongyinglianjinrong/Rectangle 3.png',catName:'冷冻肉制品分割类',specs:['规格：按需分割','保质期：18个月','储存温度：-18℃以下'],features:['工厂直供','品质稳定','规格齐全']},
+    {name:'冷冻草莓',cat:'frozen-fruit',img:'images/yewujieshao/gongyinglianjinrong/Mask group.png',catName:'冷冻果蔬类',specs:['规格：500g/盒','保质期：24个月','储存温度：-18℃以下'],features:['当季鲜采','瞬间冷冻','保留营养']},
+    {name:'冷冻蓝莓',cat:'frozen-fruit',img:'images/yewujieshao/gongyinglianjinrong/Mask group@2x.png',catName:'冷冻果蔬类',specs:['规格：500g/盒','保质期：24个月','储存温度：-18℃以下'],features:['野生蓝莓','花青素丰富','烘焙佳品']},
+    {name:'冷冻混合蔬菜',cat:'frozen-fruit',img:'images/yewujieshao/gongyinglianjinrong/Mask group_1.png',catName:'冷冻果蔬类',specs:['规格：500g/袋','保质期：24个月','储存温度：-18℃以下'],features:['多种蔬菜','营养均衡','免切免洗']},
+    {name:'冷冻青豆',cat:'frozen-fruit',img:'images/yewujieshao/gongyinglianjinrong/Mask group4.png',catName:'冷冻果蔬类',specs:['规格：500g/袋','保质期：24个月','储存温度：-18℃以下'],features:['颗颗饱满','色泽翠绿','烹饪便捷']},
+    {name:'冷冻玉米粒',cat:'frozen-fruit',img:'images/yewujieshao/gongyinglianjinrong/Rectangle 5.png',catName:'冷冻果蔬类',specs:['规格：500g/袋','保质期：24个月','储存温度：-18℃以下'],features:['甜玉米粒','免切即用','辅食优选']},
+    {name:'冷冻西兰花',cat:'frozen-fruit',img:'images/yewujieshao/gongyinglianjinrong/Rectangle 2.png',catName:'冷冻果蔬类',specs:['规格：500g/袋','保质期：24个月','储存温度：-18℃以下'],features:['花球紧实','营养丰富','烹饪多样']},
+    {name:'冷冻芒果丁',cat:'frozen-fruit',img:'images/yewujieshao/gongyinglianjinrong/Rectangle 3.png',catName:'冷冻果蔬类',specs:['规格：500g/盒','保质期：24个月','储存温度：-18℃以下'],features:['热带芒果','香甜可口','甜品原料']},
+    {name:'冷冻菠萝块',cat:'frozen-fruit',img:'images/yewujieshao/gongyinglianjinrong/Mask group.png',catName:'冷冻果蔬类',specs:['规格：500g/袋','保质期：24个月','储存温度：-18℃以下'],features:['泰国菠萝','果肉饱满','酸甜可口']}
+  ];
+
+
+
+  var related = allProducts.filter(function(p){ return p.cat === cat && p.name !== name; }).slice(0, 4);
+  if(related.length < 4){
+    var others = allProducts.filter(function(p){ return p.cat !== cat && p.name !== name; });
+    while(related.length < 4 && others.length > 0){
+      related.push(others.shift());
+    }
+  }
+
+  // 渲染推荐产品网格（供应链卡片样式）
+  var relatedGrid = document.getElementById('relatedGrid');
+  if(relatedGrid){
+    var gridHtml = '';
+    related.slice(0, 4).forEach(function(p){
+      gridHtml += '<a class="supply-card" href="supply-detail.html?name=' + encodeURIComponent(p.name) + '&cat=' + p.cat + '&img=' + encodeURIComponent(p.img) + '">';
+      gridHtml += '<div class="supply-card-img"><img src="' + encodeURI(p.img) + '" alt="' + p.name + '" loading="lazy"></div>';
+      gridHtml += '<div class="supply-card-body"><h3>' + p.name + '</h3></div>';
+      gridHtml += '</a>';
+    });
+    relatedGrid.innerHTML = gridHtml || '<p style="text-align:center;color:var(--gr);grid-column:1/-1;">暂无推荐产品</p>';
+  }
+})();
+
+// 从后台加载产品详情内容
+(function(){
+  var params = new URLSearchParams(window.location.search);
+  var name = params.get('name');
+  if (!name) return;
+  var detailEl = document.getElementById('sdDetail');
+  if (!detailEl) return;
+  fetch('/api/list-items/product-content?title=' + encodeURIComponent(name))
+    .then(function(r){ return r.json(); })
+    .then(function(d){
+      if (d.ok && d.content) {
+        detailEl.innerHTML = d.content;
+      }
+    })
+    .catch(function(){
+      // 加载失败不做处理，保持默认提示
+    });
+})();
+
+// 咨询弹窗
+function openSdModal(){
+  document.getElementById('sdModalOverlay').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+function closeSdModal(){
+  document.getElementById('sdModalOverlay').classList.remove('active');
+  document.body.style.overflow = '';
+}
+</script>
+
+</body>
+</html>

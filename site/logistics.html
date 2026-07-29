@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>物流服务 - 中国-东盟特色产业链出海平台</title>
+<meta name="description" content="世界各大船公司一览，国内外物流集散地">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=219">
+</head>
+<body>
+
+<!-- ====== HEADER ====== -->
+<header>
+  <div class="header-inner">
+    <a href="sy-index.html" class="logo-link"><img src="images/logo.png?v=1" alt="logo" class="logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="logo-fallback">🌏</span></a>
+    <nav>
+      <a href="sy-index.html">首页</a>
+      <div class="nav-dropdown">
+        <a href="sy-index.html" class="nav-dropdown-trigger">业务介绍</a>
+        <div class="nav-dropdown-menu">
+          <a href="supply-finance.html">供应链金融</a>
+          <a href="tourism.html">文旅生态</a>
+          <a href="development.html">新品研发</a>
+          <a href="testing.html">产品检测</a>
+          <a href="education.html">教育合作</a>
+          <a href="training.html">培训</a>
+          <a href="certification.html">认证</a>
+        </div>
+      </div>
+      <a href="events.html">协会大事记</a>
+      <a href="supply.html">供应链</a>
+      <a href="news.html">新闻资讯</a>
+      <a href="park.html">生产园区</a>
+      <div class="nav-dropdown">
+            <a href="logistics.html" class="nav-dropdown-trigger nav-active">物流保税</a>
+            <div class="nav-dropdown-menu">
+              <a href="logistics.html">物流服务</a>
+              <a href="http://www.xianmai.cn/" target="_blank">物流系统</a>
+            </div>
+          </div>
+      <a href="exhibition.html">会展服务</a>
+      <div class="nav-dropdown">
+        <a href="javascript:void(0)" class="nav-dropdown-trigger">合作招商</a>
+        <div class="nav-dropdown-menu">
+          <a href="partner.html">合作招商</a>
+          <a href="info-collection.html">信息采集</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <a href="#" class="nav-dropdown-trigger">在线商城</a>
+        <div class="nav-dropdown-menu">
+          <a href="https://tesechanyelian.en.alibaba.com/" target="_blank">阿里巴巴国际站</a>
+          <a href="https://hl.ehuifa.com/cmp#/" target="_blank">河州味道</a>
+        </div>
+      </div>
+
+<a href="#">选择语言</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- ====== HERO BANNER ====== -->
+<section class="logi-hero" data-cms-banner="logistics.banner"></section>
+
+<!-- ====== 船公司列表 ====== -->
+<section class="logi-section" id="logi-content">
+  <div class="content-area">
+    <div class="logi-section-head" data-aos="fade-up">
+      <h2>世界各大船公司</h2>
+      <p>中文名称及对应的官方网站</p>
+    </div>
+
+    <!-- 左右布局：sidebar + content -->
+    <div class="logi-layout" data-aos="fade-up">
+      <!-- 左侧 sidebar：搜索 + 区域 tabs -->
+      <aside class="logi-sidebar">
+        <div class="logi-search">
+          <input type="text" id="logiSearch" placeholder="搜索船公司名称或网址" autocomplete="off">
+          <button type="button" id="logiSearchBtn" aria-label="搜索">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg>
+          </button>
+        </div>
+        <div class="logi-tabs" id="logiRegionTabs">
+          <button class="logi-tab active" data-region="all">全部</button>
+          <button class="logi-tab" data-region="domestic">国内</button>
+          <button class="logi-tab" data-region="international">国际</button>
+        </div>
+      </aside>
+
+      <!-- 右侧 content：国别筛选 + 卡片 + 分页 -->
+      <div class="logi-content">
+        <!-- 二级国别筛选 -->
+        <div class="logi-country-filter" id="logiCountryFilter"></div>
+
+        <!-- 卡片网格 -->
+        <div class="logi-page-grid" id="logiGrid"></div>
+
+        <!-- 分页器 -->
+        <div class="logi-pagination" id="logiPagination"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ====== FOOTER ====== -->
+<footer>
+  <div class="content-area">
+    <div class="footer-grid">
+      <div class="fcol">
+        <h4>合作伙伴</h4>
+        <ul>
+          <li><a href="supply-finance.html">供应链金融</a></li>
+          <li><a href="tourism.html">文旅生态</a></li>
+          <li><a href="development.html">新品研发</a></li>
+          <li><a href="testing.html">产品检测</a></li>
+          <li><a href="education.html">教育合作</a></li>
+          <li><a href="training.html">培训</a></li>
+          <li><a href="certification.html">认证</a></li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <h4>供应链</h4>
+        <ul>
+          <li><a href="sy-index.html#supply">冷冻产成品类</a></li>
+          <li><a href="sy-index.html#supply">冷冻肉制品分割类</a></li>
+          <li><a href="sy-index.html#supply">冷冻果蔬类</a></li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <h4>新闻资讯</h4>
+        <ul>
+          <li><a href="news.html">行业新闻</a></li>
+          <li><a href="news.html">协会动态</a></li>
+        </ul>
+      </div>
+      <div class="fcol fcol-contact">
+        <h4>联系我们</h4>
+        <ul class="contact-info">
+          <li><span class="contact-icon"><img src="images/icon-location.png" alt="地址" width="20" height="20"></span>北京市海淀区中关村科技园区88号</li>
+          <li><span class="contact-icon"><img src="images/icon-phone.png" alt="电话" width="20" height="20"></span>+86 10 8888 8888</li>
+          <li><span class="contact-icon"><img src="images/icon-email.png" alt="邮箱" width="20" height="20"></span>research@innovation-center.com</li>
+        </ul>
+        <div class="qr-row">
+          <div class="qr-box"><img src="images/企业微信截图_91538b3c-cf5c-4dc0-91cb-91fbd591bc50 1.png" data-cms="home.qr1_image" data-cms-mode="src" alt="城市合作" width="100" height="100" loading="lazy" decoding="async"><span data-cms="home.qr1_name">城市合作</span></div>
+          <div class="qr-box"><img src="images/企业微信截图_91538b3c-cf5c-4dc0-91cb-91fbd591bc50 2.png" data-cms="home.qr2_image" data-cms-mode="src" alt="生产商合作" width="100" height="100" loading="lazy" decoding="async"><span data-cms="home.qr2_name">生产商合作</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 中国-东盟特色产业链出海平台</span>
+      <div class="fb-links">
+        <a href="#">隐私政策</a>
+        <a href="#">服务条款</a>
+        <a href="#">网站地图</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="main.js"></script>
+<script src="cms-loader.js"></script>
+<script src="cms-list-loader.js?v=1"></script>
+<script>
+(function(){
+  // ===== 国别数据（按英文国名首字母升序） =====
+  // region: domestic(国内) / international(国际)
+  // 每条公司增加 nameEn 英文名，便于后期切换语言版本
+  // Build COUNTRIES from API data if available, otherwise use hardcoded fallback
+  function buildCountries() {
+    if (window._logisticsData && window._logisticsData.length) {
+      return window._logisticsData.map(function(d) {
+        return {
+          cn: d.cn,
+          region: d.region,
+          companies: d.companies.map(function(c) {
+            return { name: c.name, url: c.url, nameEn: c.name };
+          })
+        };
+      });
+    }
+    return [];
+  }
+  var COUNTRIES = buildCountries();
+  // Will be re-initialized when API data loads via _reinitLogistics
+  var state = { region:'all', country:'all', keyword:'', page:1, pageSize:12 };
+
+  // Early expose reinit function so cms-list-loader.js can call it when API data arrives
+  window._reinitLogistics = function() {
+    COUNTRIES = buildCountries();
+    if (!COUNTRIES.length) return;
+    state.region = 'all';
+    state.country = 'all';
+    state.keyword = '';
+    state.page = 1;
+    renderCountryFilter();
+    render();
+  };
+
+  var $grid = document.getElementById('logiGrid');
+  var $filter = document.getElementById('logiCountryFilter');
+  var $tabs = document.getElementById('logiRegionTabs');
+  var $search = document.getElementById('logiSearch');
+  var $pagination = document.getElementById('logiPagination');
+
+  // 渲染国别筛选标签（按当前区域动态显示，data-en 标注英文国名）
+  function renderCountryFilter(){
+    var list;
+    if(state.region === 'domestic'){
+      list = COUNTRIES.filter(function(c){ return c.region === 'domestic'; });
+    } else if(state.region === 'international'){
+      list = COUNTRIES.filter(function(c){ return c.region === 'international'; });
+    } else {
+      list = COUNTRIES.slice();
+    }
+
+    var html = '<span class="logi-country-tag active" data-country="all" data-en="All">全部</span>';
+    list.forEach(function(c){
+      html += '<span class="logi-country-tag" data-country="'+c.cn+'" data-en="'+c.en+'">'+c.cn+'</span>';
+    });
+    $filter.innerHTML = html;
+    $filter.querySelectorAll('.logi-country-tag').forEach(function(tag){
+      tag.addEventListener('click', function(){
+        $filter.querySelectorAll('.logi-country-tag').forEach(function(t){ t.classList.remove('active'); });
+        tag.classList.add('active');
+        state.country = tag.getAttribute('data-country');
+        state.page = 1;
+        render();
+      });
+    });
+  }
+
+  // 渲染卡片（分页模式，data-en 标注英文公司名）
+  function render(){
+    var kw = state.keyword.toLowerCase().trim();
+
+    // 拉平所有匹配的公司
+    var items = [];
+    COUNTRIES.forEach(function(country){
+      if(state.region !== 'all' && country.region !== state.region) return;
+      if(state.country !== 'all' && state.country !== country.cn) return;
+      country.companies.forEach(function(co){
+        if(kw && co.name.toLowerCase().indexOf(kw) === -1
+            && (co.nameEn || '').toLowerCase().indexOf(kw) === -1
+            && co.url.toLowerCase().indexOf(kw) === -1) return;
+        items.push(co);
+      });
+    });
+
+    var total = items.length;
+    var totalPages = Math.ceil(total / state.pageSize) || 1;
+    // 保证 page 不超范围
+    if(state.page > totalPages) state.page = totalPages;
+    if(state.page < 1) state.page = 1;
+    var start = (state.page - 1) * state.pageSize;
+    var pageItems = items.slice(start, start + state.pageSize);
+
+    if(total === 0){
+      $grid.innerHTML = '<div class="logi-empty" data-en="No matching shipping companies found, try another keyword">未找到匹配的船公司，请尝试其他关键词</div>';
+      $pagination.innerHTML = '';
+      return;
+    }
+
+    var html = '';
+    pageItems.forEach(function(co){
+      html += '<a class="logi-page-card" href="'+co.url+'" target="_blank" rel="noopener" data-en="'+(co.nameEn||'')+'">';
+      html +=   '<div class="logi-page-info">';
+      html +=     '<span class="logi-page-name" data-en="'+(co.nameEn||'')+'">'+co.name+'</span>';
+      html +=     '<span class="logi-page-url">'+co.url.replace(/^https?:\/\//, '')+'</span>';
+      html +=   '</div>';
+      html += '</a>';
+    });
+    $grid.innerHTML = html;
+    // 卡片点击选中（单选 radio 行为）
+    $grid.querySelectorAll('.logi-page-card').forEach(function(card){
+      card.addEventListener('click', function(){
+        $grid.querySelectorAll('.logi-page-card.active').forEach(function(c){ c.classList.remove('active'); });
+        card.classList.add('active');
+      });
+    });
+
+    // 渲染分页器
+    renderPagination(total, totalPages);
+  }
+
+  // 渲染分页器
+  function renderPagination(total, totalPages){
+    if(totalPages <= 1){
+      $pagination.innerHTML = '';
+      return;
+    }
+    var html = '';
+    // 上一页
+    var prevDisabled = state.page <= 1 ? ' disabled' : '';
+    html += '<span class="logi-page-btn'+prevDisabled+'" data-action="prev">&lt;</span>';
+    // 页码按钮（最多显示 7 个，中间用省略号）
+    var pages = [];
+    if(totalPages <= 7){
+      for(var i = 1; i <= totalPages; i++) pages.push(i);
+    } else {
+      pages.push(1);
+      if(state.page > 3) pages.push('...');
+      var s = Math.max(2, state.page - 1);
+      var e = Math.min(totalPages - 1, state.page + 1);
+      if(state.page <= 3) { s = 2; e = 4; }
+      if(state.page >= totalPages - 2) { s = totalPages - 3; e = totalPages - 1; }
+      for(var j = s; j <= e; j++) pages.push(j);
+      if(state.page < totalPages - 2) pages.push('...');
+      pages.push(totalPages);
+    }
+    pages.forEach(function(p){
+      if(p === '...'){
+        html += '<span class="logi-page-btn disabled">…</span>';
+      } else {
+        var active = p === state.page ? ' active' : '';
+        html += '<span class="logi-page-btn'+active+'" data-page="'+p+'">'+p+'</span>';
+      }
+    });
+    // 下一页
+    var nextDisabled = state.page >= totalPages ? ' disabled' : '';
+    html += '<span class="logi-page-btn'+nextDisabled+'" data-action="next">&gt;</span>';
+    // 总数信息
+    html += '<span class="logi-page-info-text">共 '+total+' 家</span>';
+
+    $pagination.innerHTML = html;
+
+    // 分页按钮事件
+    $pagination.querySelectorAll('.logi-page-btn:not(.disabled)').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        var action = btn.getAttribute('data-action');
+        var page = btn.getAttribute('data-page');
+        if(action === 'prev') state.page--;
+        else if(action === 'next') state.page++;
+        else if(page) state.page = parseInt(page);
+        render();
+        // 滚动到卡片区域顶部
+        $grid.scrollIntoView({ behavior:'smooth', block:'start' });
+      });
+    });
+  }
+
+  // 区域 tab 切换
+  $tabs.querySelectorAll('.logi-tab').forEach(function(t){
+    t.addEventListener('click', function(){
+      $tabs.querySelectorAll('.logi-tab').forEach(function(b){ b.classList.remove('active'); });
+      t.classList.add('active');
+      state.region = t.getAttribute('data-region');
+      // 切换区域时重置国别筛选为全部，并重建二级筛选标签
+      state.country = 'all';
+      state.page = 1;
+      renderCountryFilter();
+      renderCountryFilter();
+      render();
+    });
+  });
+
+  // 搜索（带 debounce）
+  var searchTimer = null;
+  $search.addEventListener('input', function(){
+    clearTimeout(searchTimer);
+    searchTimer = setTimeout(function(){
+      state.keyword = $search.value;
+      state.page = 1;
+      render();
+    }, 150);
+  });
+  var $searchBtn = document.getElementById('logiSearchBtn');
+  if($searchBtn) $searchBtn.addEventListener('click', function(){
+    state.keyword = $search.value;
+    state.page = 1;
+    render();
+  });
+
+  // 初始化
+  renderCountryFilter();
+  render();
+
+})();
+</script>
+
+</body>
+</html>

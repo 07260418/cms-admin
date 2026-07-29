@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>后台登录 - 官网内容管理</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="admin.css?v=20260728a">
+</head>
+<body class="login-body">
+
+  <!-- 弥散渐变光斑 -->
+  <div class="login-blob blob-1"></div>
+  <div class="login-blob blob-2"></div>
+  <div class="login-blob blob-3"></div>
+
+  <!-- 科技感网格 -->
+  <div class="login-grid"></div>
+
+  <div class="login-wrapper">
+    <div class="login-card">
+      <div class="login-card-glow"></div>
+      <div class="login-card-inner">
+        <div class="login-brand">
+          <img src="/images/logo.png" alt="HALALWORLD" class="login-logo" onerror="this.style.display='none'">
+          <h1>中国国际特色产业链出海平台</h1>
+          <p class="login-subtitle">Content Management System</p>
+        </div>
+
+        <form id="loginForm">
+          <div class="login-field">
+            <label for="username">
+              <svg viewBox="0 0 20 20" fill="none"><path d="M10 10a4 4 0 100-8 4 4 0 000 8zm0 2c-4.42 0-8 1.79-8 4v2h16v-2c0-2.21-3.58-4-8-4z" fill="currentColor"/></svg>
+              账号
+            </label>
+            <input type="text" id="username" name="username" value="admin" required autocomplete="username" placeholder="请输入账号">
+          </div>
+          <div class="login-field">
+            <label for="password">
+              <svg viewBox="0 0 20 20" fill="none"><path d="M10 2a3 3 0 00-3 3v2H6a2 2 0 00-2 2v7a2 2 0 002 2h8a2 2 0 002-2V9a2 2 0 00-2-2h-1V5a3 3 0 00-3-3zm-1 5V5a1 1 0 112 0v2H9z" fill="currentColor"/></svg>
+              密码
+            </label>
+            <input type="password" id="password" name="password" value="admin123" required autocomplete="current-password" placeholder="请输入密码">
+          </div>
+          <button type="submit">
+            <span>登 录</span>
+            <svg viewBox="0 0 20 20" fill="none"><path d="M7 5l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <p id="loginMsg" class="login-msg"></p>
+        </form>
+      </div>
+    </div>
+    <p class="login-footer">© 2026 中国-东盟特色产业链出海平台</p>
+  </div>
+
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', async e => {
+      e.preventDefault();
+      const btn = e.target.querySelector('button');
+      btn.disabled = true;
+      btn.classList.add('loading');
+      btn.querySelector('span').textContent = '登录中';
+      const fd = new FormData(e.target);
+      try {
+        const r = await fetch('/api/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ username: fd.get('username'), password: fd.get('password') })
+        });
+        const data = await r.json();
+        if (r.ok && data.ok) {
+          location.href = '/admin/static/admin.html';
+        } else {
+          document.getElementById('loginMsg').textContent = data.error || '账号或密码错误';
+          btn.disabled = false;
+          btn.classList.remove('loading');
+          btn.querySelector('span').textContent = '登 录';
+        }
+      } catch(e) {
+        document.getElementById('loginMsg').textContent = '网络错误，请重试';
+        btn.disabled = false;
+        btn.classList.remove('loading');
+        btn.querySelector('span').textContent = '登 录';
+      }
+    });
+  </script>
+</body>
+</html>

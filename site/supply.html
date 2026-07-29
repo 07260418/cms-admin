@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>供应链 - 中国-东盟特色产业链出海平台</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=229">
+</head>
+<body>
+
+<!-- ====== HEADER ====== -->
+<header>
+  <div class="header-inner">
+    <a href="sy-index.html" class="logo-link"><img src="images/logo.png?v=1" alt="logo" class="logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="logo-fallback">🌏</span></a>
+    <nav>
+      <a href="sy-index.html">首页</a>
+      <div class="nav-dropdown">
+        <a href="sy-index.html" class="nav-dropdown-trigger">业务介绍</a>
+        <div class="nav-dropdown-menu">
+          <a href="supply-finance.html">供应链金融</a>
+          <a href="tourism.html">文旅生态</a>
+          <a href="development.html">新品研发</a>
+          <a href="testing.html">产品检测</a>
+          <a href="education.html">教育合作</a>
+          <a href="training.html">培训</a>
+          <a href="certification.html">认证</a>
+        </div>
+      </div>
+      <a href="events.html">协会大事记</a>
+      <a href="supply.html" class="nav-active">供应链</a>
+      <a href="news.html">新闻资讯</a>
+      <a href="park.html">生产园区</a>
+      <div class="nav-dropdown">
+        <a href="logistics.html" class="nav-dropdown-trigger">物流保税</a>
+        <div class="nav-dropdown-menu">
+          <a href="logistics.html">物流服务</a>
+          <a href="http://www.xianmai.cn/" target="_blank">物流系统</a>
+        </div>
+      </div>
+      <a href="exhibition.html">会展服务</a>
+      <div class="nav-dropdown">
+        <a href="javascript:void(0)" class="nav-dropdown-trigger">合作招商</a>
+        <div class="nav-dropdown-menu">
+          <a href="partner.html">合作招商</a>
+          <a href="info-collection.html">信息采集</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <a href="#" class="nav-dropdown-trigger">在线商城</a>
+        <div class="nav-dropdown-menu">
+          <a href="https://tesechanyelian.en.alibaba.com/" target="_blank">阿里巴巴国际站</a>
+          <a href="https://hl.ehuifa.com/cmp#/" target="_blank">河州味道</a>
+        </div>
+      </div>
+
+<a href="#">选择语言</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- ====== 供应链 Hero ====== -->
+<section class="sf-hero sf-hero-banner supply-banner" data-cms-banner="supply.banner">
+  <div class="content-area">
+    <h1 class="sr-only">供应链产品展示</h1>
+  </div>
+</section>
+
+<!-- ====== 产品列表 ====== -->
+<section class="supply-section">
+  <div class="content-area">
+
+    <!-- 分类筛选 -->
+    <div class="supply-filters" data-aos="fade-up">
+      <button class="supply-filter active" data-category="all">全部</button>
+      <button class="supply-filter" data-category="frozen-products">冷冻产成品类</button>
+      <button class="supply-filter" data-category="frozen-meat">冷冻肉制品分割类</button>
+      <button class="supply-filter" data-category="frozen-fruit">冷冻果蔬类</button>
+    </div>
+
+    <!-- 产品网格 -->
+    <div class="supply-grid" id="supplyGrid">
+      <!-- 由 cms-list-loader.js 动态渲染 -->
+    </div>
+
+    <!-- 空状态提示 -->
+    <div class="supply-empty" id="supplyEmpty" style="display:none">
+      <p>暂无该分类的产品</p>
+    </div>
+
+    <!-- 分页器 -->
+    <div class="logi-pagination" id="supplyPagination" data-aos="fade-up">
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<!-- ====== FOOTER ====== -->
+<footer>
+  <div class="content-area">
+    <div class="footer-grid">
+      <div class="fcol">
+        <h4>合作伙伴</h4>
+        <ul>
+          <li><a href="supply-finance.html">供应链金融</a></li>
+          <li><a href="tourism.html">文旅生态</a></li>
+          <li><a href="development.html">新品研发</a></li>
+          <li><a href="testing.html">产品检测</a></li>
+          <li><a href="education.html">教育合作</a></li>
+          <li><a href="training.html">培训</a></li>
+          <li><a href="certification.html">认证</a></li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <h4>供应链</h4>
+        <ul>
+          <li><a href="supply.html">冷冻产成品类</a></li>
+          <li><a href="supply.html">冷冻肉制品分割类</a></li>
+          <li><a href="supply.html">冷冻果蔬类</a></li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <h4>新闻资讯</h4>
+        <ul>
+          <li><a href="sy-index.html#news">行业新闻</a></li>
+          <li><a href="sy-index.html#news">协会动态</a></li>
+        </ul>
+      </div>
+      <div class="fcol fcol-contact">
+        <h4>联系我们</h4>
+        <ul class="contact-info">
+          <li><span class="contact-icon"><img src="images/icon-location.png" alt="地址" width="20" height="20"></span>北京市海淀区中关村科技园区88号</li>
+          <li><span class="contact-icon"><img src="images/icon-phone.png" alt="电话" width="20" height="20"></span>+86 10 8888 8888</li>
+          <li><span class="contact-icon"><img src="images/icon-email.png" alt="邮箱" width="20" height="20"></span>research@innovation-center.com</li>
+        </ul>
+        <div class="qr-row">
+          <div class="qr-box"><img src="images/企业微信截图_91538b3c-cf5c-4dc0-91cb-91fbd591bc50 1.png" data-cms="home.qr1_image" data-cms-mode="src" alt="城市合作" width="100" height="100" loading="lazy" decoding="async"><span data-cms="home.qr1_name">城市合作</span></div>
+          <div class="qr-box"><img src="images/企业微信截图_91538b3c-cf5c-4dc0-91cb-91fbd591bc50 2.png" data-cms="home.qr2_image" data-cms-mode="src" alt="生产商合作" width="100" height="100" loading="lazy" decoding="async"><span data-cms="home.qr2_name">生产商合作</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 中国-东盟特色产业链出海平台</span>
+      <div class="fb-links">
+        <a href="#">隐私政策</a>
+        <a href="#">服务条款</a>
+        <a href="#">网站地图</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="main.js"></script>
+<script src="cms-loader.js"></script>
+<script src="cms-list-loader.js?v=6"></script>
+<script>
+// URL 参数预选分类（在 cms-list-loader 加载完成后触发）
+(function(){
+  var params = new URLSearchParams(window.location.search);
+  var cat = params.get('cat');
+  if(!cat) return;
+  // 等 reinitSupply 绑定好 filter 后再触发
+  var tryClick = setInterval(function(){
+    var target = document.querySelector('.supply-filter[data-category="' + cat + '"]');
+    if(target){
+      target.click();
+      clearInterval(tryClick);
+    }
+  }, 200);
+  setTimeout(function(){ clearInterval(tryClick); }, 5000);
+})();
+</script>
+
+</body>
+</html>

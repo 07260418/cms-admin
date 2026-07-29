@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>内容管理 - 官网后台</title>
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+<div class="topbar">
+  <div class="topbar-left">官网内容管理后台</div>
+  <div class="topbar-right">
+    <a href="/sy-index.html" target="_blank" class="btn-ghost">预览首页</a>
+    <button id="logoutBtn" class="btn-ghost">退出</button>
+  </div>
+</div>
+<div class="main-tabs">
+  <button class="main-tab active" data-tab="content">内容管理</button>
+  <button class="main-tab" data-tab="news">新闻管理</button>
+  <button class="main-tab" data-tab="product">产品管理</button>
+  <button class="main-tab" data-tab="categories">分类管理</button>
+  <button class="main-tab" data-tab="expo">会展管理</button>
+  <button class="main-tab" data-tab="milestone">大事记管理</button>
+  <button class="main-tab" data-tab="logistics">物流管理</button>
+  <button class="main-tab" data-tab="info">信息采集</button>
+  <button class="main-tab" data-tab="settings">系统设置</button>
+  <button class="main-tab" data-tab="users">权限管理</button>
+</div>
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <h3 id="sidebarTitle">页面/区块</h3>
+    <ul id="pageList"></ul>
+  </aside>
+  <main class="content">
+    <div id="addBar"></div>
+    <div id="items"></div>
+  </main>
+</div>
+<script src="admin.js?v=1785290953"></script>
+<div id="debugInfo" style="display:none;position:fixed;bottom:0;left:0;right:0;background:#fee;padding:8px;font-size:12px;z-index:9999;border-top:2px solid #e00;max-height:120px;overflow:auto"></div>
+<script>
+window.onerror = function(msg, url, line, col, err) {
+  var d = document.getElementById('debugInfo');
+  if (d) { d.style.display = 'block'; d.innerHTML += '<div>' + msg + ' (line ' + line + ')</div>'; }
+  return false;
+};
+console.log('admin.js version: ' + document.querySelector('script[src*="admin.js"]')?.getAttribute('src'));
+</script>
+</body>
+</html>
