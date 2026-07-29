@@ -502,7 +502,7 @@ app.delete('/api/info-collections/:id', (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`CMS 后台已启动: http://localhost:${PORT}/admin`);
   console.log(`网站预览: http://localhost:${PORT}/sy-index.html`);
 });
