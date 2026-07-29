@@ -173,7 +173,7 @@ app.post('/api/list-items', auth, (req, res) => {
   const info = db.prepare(`
     INSERT INTO list_items (list_type, title, summary, date, category, image, link, sort_order, visible, country, content)
     VALUES (?, ?, ?, ?, ?, ?, ?, ?, 1, ?, ?)
-  `).run(list_type, title, summary || '', date || '', category || '', image || '', link || '', sort_order || 0, country || '');
+  `).run(list_type, title, summary || '', date || '', category || '', image || '', link || '', sort_order || 0, country || '', content || '');
   db.prepare('INSERT INTO op_logs (operator, action, detail) VALUES (?, ?, ?)')
     .run(req.session.user.username, 'create_item', `type=${list_type}, title=${title}`);
   res.json({ ok: true, item: db.prepare('SELECT * FROM list_items WHERE id = ?').get(info.lastInsertRowid) });
