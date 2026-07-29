@@ -1,14 +1,14 @@
 {
   "name": "cms-admin",
   "version": "1.0.0",
-  "description": "官网内容管理后台（图片/Banner/Icon/文字上传替换）",
+  "description": "\u5b98\u7f51\u5185\u5bb9\u7ba1\u7406\u540e\u53f0",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "dev": "node server.js"
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": "20.x"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
