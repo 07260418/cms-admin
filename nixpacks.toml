@@ -1,8 +1,9 @@
 [phases]
-  install = { dep_commands = ["npm install --build-from-source"] }
+  [phases.install]
+  dep_commands = ["npm install --build-from-source"]
 
-[phases.build]
-  cmds = ["ls -la node_modules/.package-lock.json || true"]
+  [phases.build]
+  cmds = ["echo 'build ready'"]
 
 [start]
   cmd = "node server.js"
