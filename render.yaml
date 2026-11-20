@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: cms-admin
+    runtime: node
+    plan: free
+    region: singapore
+    buildCommand: npm install
+    startCommand: node server.js
+    healthCheckPath: /api/me
