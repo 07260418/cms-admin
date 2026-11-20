@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
 <link href="aos.css" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=246">
+<link rel="stylesheet" href="styles.css?v=247">
 </head>
 <body>
 
@@ -626,5 +626,23 @@
 
 
 <script src="ai-chat.js?v=1"></script>
+
+<script>
+(function(){
+  function swapToPoster(v){
+    if (v.dataset.posterFallback) return;
+    v.dataset.posterFallback = '1';
+    var img = document.createElement('img');
+    img.src = (v.getAttribute('poster')||'').split('?')[0];
+    img.alt = '';
+    img.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover';
+    v.parentNode.insertBefore(img, v);
+  }
+  document.querySelectorAll('.supply-video').forEach(function(v){
+    v.addEventListener('error', function(){ swapToPoster(v); });
+    if (v.error) swapToPoster(v);
+  });
+})();
+</script>
 </body>
 </html>
