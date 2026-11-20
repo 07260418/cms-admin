@@ -3576,3 +3576,12 @@ footer{background:var(--ft);padding:80px 0 32px;color:var(--wh)}
   .ic-form-actions{flex-direction:column;}
   .ic-btn{width:100%;}
   .ic-toast{width:calc(100vw - 32px);padding:14px 18px;}
+
+/* ---- 桌面端：导航下划线贴合头部条底边 ---- */
+@media(min-width:1201px){
+  nav{height:100%}
+  nav>a{display:inline-flex;align-items:center;height:100%;padding:4px 0}
+  nav>a::after{bottom:0}
+  .nav-dropdown{height:100%}
+  .nav-dropdown>.nav-dropdown-trigger{display:inline-flex;align-items:center;height:100%}
+}

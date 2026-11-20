@@ -470,29 +470,35 @@
       return allCards.filter(function (c) { return c.getAttribute('data-category') === currentCategory; });
     }
 
-    // 动态加载产品分类筛选按钮
+    // 动态加载产品分类筛选按钮（接口失败时使用页面内置按钮）
+    function wireSupplyFilters(container) {
+      if (!container) return;
+      container.querySelectorAll('.supply-filter').forEach(function (f) {
+        f.onclick = function () {
+          container.querySelectorAll('.supply-filter').forEach(function (b) { b.classList.remove('active'); });
+          f.classList.add('active');
+          currentCategory = f.getAttribute('data-category');
+          currentPage = 1;
+          showPage();
+        };
+      });
+    }
     fetch('/api/categories?type=product')
-      .then(function (r) { return r.ok ? r.json() : []; })
+      .then(function (r) { if (r.ok) return r.json(); throw 0; })
       .then(function (cats) {
         var container = document.getElementById('supplyFilters');
-        if (!container) return;
+        if (!container || !cats.length) { wireSupplyFilters(document.getElementById('supplyFilters')); return; }
         var html = '<button class="supply-filter active" data-category="all">全部</button>';
         cats.forEach(function (cat) {
           html += '<button class="supply-filter" data-category="' + esc(cat.value) + '">' + esc(cat.label) + '</button>';
         });
         container.innerHTML = html;
-        // 绑定事件
-        container.querySelectorAll('.supply-filter').forEach(function (f) {
-          f.onclick = function () {
-            container.querySelectorAll('.supply-filter').forEach(function (b) { b.classList.remove('active'); });
-            f.classList.add('active');
-            currentCategory = f.getAttribute('data-category');
-            currentPage = 1;
-            showPage();
-          };
-        });
+        wireSupplyFilters(container);
       })
-      .catch(function () {});
+      .catch(function () {
+        // 静态托管：直接绑定页面里写死的分类按钮
+        wireSupplyFilters(document.getElementById('supplyFilters'));
+      });
 
     function showPage() {
       var filtered = getFilteredCards();
