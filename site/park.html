@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link href="aos.css" rel="stylesheet">
 <link rel="stylesheet" href="styles.css?v=241">
 </head>
 <body>
@@ -202,8 +202,8 @@
   </div>
 </footer>
 
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+<script src="aos.js"></script>
+<script src="echarts.min.js"></script>
 <script src="main.js"></script>
 <script src="cms-loader.js"></script>
 <script>
@@ -247,7 +247,7 @@
     });
   });
 
-  fetch("https://cdn.jsdelivr.net/gh/apache/echarts@4.9.0/map/json/world.json")
+  fetch("echarts-world.json")
     .then(function(r){return r.json()})
     .then(function(geoJson){
       echarts.registerMap("world", geoJson);
