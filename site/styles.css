@@ -171,7 +171,7 @@ nav .nav-dropdown-trigger.nav-active::after{width:0;height:0;background:none}
   font-weight:700;font-size:24px;color:var(--dk);margin-bottom:8px;
   transition:color .3s;
 }
-.sec-expo .sec-head h2{font-size:18px}
+.sec-expo .sec-head h2{font-size:24px}
 @keyframes titleFlash{
   0%{color:var(--dk)}
   30%{color:var(--g)}

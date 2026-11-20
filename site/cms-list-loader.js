@@ -466,6 +466,30 @@
       return allCards.filter(function (c) { return c.getAttribute('data-category') === currentCategory; });
     }
 
+    // 动态加载产品分类筛选按钮
+    fetch('/api/categories?type=product')
+      .then(function (r) { return r.ok ? r.json() : []; })
+      .then(function (cats) {
+        var container = document.getElementById('supplyFilters');
+        if (!container) return;
+        var html = '<button class="supply-filter active" data-category="all">全部</button>';
+        cats.forEach(function (cat) {
+          html += '<button class="supply-filter" data-category="' + esc(cat.value) + '">' + esc(cat.label) + '</button>';
+        });
+        container.innerHTML = html;
+        // 绑定事件
+        container.querySelectorAll('.supply-filter').forEach(function (f) {
+          f.onclick = function () {
+            container.querySelectorAll('.supply-filter').forEach(function (b) { b.classList.remove('active'); });
+            f.classList.add('active');
+            currentCategory = f.getAttribute('data-category');
+            currentPage = 1;
+            showPage();
+          };
+        });
+      })
+      .catch(function () {});
+
     function showPage() {
       var filtered = getFilteredCards();
       var total = filtered.length;
@@ -506,17 +530,6 @@
         };
       });
     }
-
-    var filters = document.querySelectorAll('.supply-filter');
-    filters.forEach(function (f) {
-      f.onclick = function () {
-        filters.forEach(function (b) { b.classList.remove('active'); });
-        f.classList.add('active');
-        currentCategory = f.getAttribute('data-category');
-        currentPage = 1;
-        showPage();
-      };
-    });
 
     allCards.forEach(function (card) {
       card.style.cursor = 'pointer';

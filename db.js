@@ -84,6 +84,7 @@ function init() {
       sort_order INTEGER DEFAULT 0,
       visible INTEGER DEFAULT 1,
       country TEXT DEFAULT '',
+      content TEXT DEFAULT '',
       created_at TEXT DEFAULT (datetime('now','localtime')),
       updated_at TEXT DEFAULT (datetime('now','localtime'))
     );

@@ -404,12 +404,12 @@ function renderAddBar() {
 
   // 仅首次渲染
   if (bar.dataset.rendered) {
-    // 更新新增按钮文字
     var btn = document.getElementById('addBtn');
     if (btn) btn.textContent = '+ 新增' + typeName;
     return;
   }
   bar.dataset.rendered = '1';
+  // const hideAdd = currentListType === 'product' || currentListType === 'logistics';
   bar.innerHTML = `<div class="add-bar">
   <button class="btn btn-primary" id="addBtn">+ 新增${typeName}</button>
   <input type="text" id="searchInput" placeholder="搜索关键词..." style="margin-left:12px;padding:6px 12px;border:1px solid #d1d5db;border-radius:6px;font-size:14px;width:200px;outline:none">

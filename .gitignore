@@ -4,3 +4,7 @@ node_modules/
 data/*.db
 data/*.db-wal
 data/*.db-shm
+
+# 本地备份与系统文件
+data/.bak-*/
+.DS_Store
