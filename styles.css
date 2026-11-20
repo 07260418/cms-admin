@@ -3577,6 +3577,7 @@ footer{background:var(--ft);padding:80px 0 32px;color:var(--wh)}
   .ic-btn{width:100%;}
   .ic-toast{width:calc(100vw - 32px);padding:14px 18px;}
 
+}
 /* ---- 导航下划线贴合头部条底边（≥769px） ---- */
 @media(min-width:769px){
   header{align-items:stretch}
